@@ -1,0 +1,23 @@
+@import '_config';
+
+.container {
+  background-color: transparent;
+  padding: $horizontal-padding;
+  position: absolute;
+  width: 100%;
+  color: white;
+  background-color: darken(#f5f6fa, $amount: 5);
+
+  > div {
+    max-width: $max-width;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img {
+      width: 10rem;
+    }
+  }
+}

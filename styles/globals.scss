@@ -1,7 +1,7 @@
+@import '_config';
+
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +13,38 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button_pill {
+  border: 0;
+  border-radius: 10rem;
+  padding: 1.5rem 3.5rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen;
+  font-weight: 600;
+  color: white;
+  background-color: $blue;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+
+  &.inverted {
+    color: $blue;
+    background-color: white;
+
+    &:hover {
+      color: white;
+      background-color: $blue;
+    }
+  }
+
+  &:hover {
+    color: $blue;
+    background-color: white;
+    border-color: $blue;
+  }
 }

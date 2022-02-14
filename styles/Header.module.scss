@@ -1,0 +1,62 @@
+@import '_config';
+
+.container {
+  background-color: transparent;
+  height: 10rem;
+  padding: $horizontal-padding;
+  position: absolute;
+  width: 100%;
+
+  .logo {
+    margin-right: auto;
+    height: 100%;
+    &:hover {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  nav {
+    height: 100%;
+    max-width: $max-width;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    margin-right: auto;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+
+    &:hover {
+      &::after {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 1rem;
+        position: absolute;
+        background-color: $blue;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: link_grow 0.25s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes link_grow {
+  from { width: 0rem; }
+  to { width: 2rem; }
+}
