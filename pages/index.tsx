@@ -64,17 +64,17 @@ const Home: NextPage = () => {
           <div className={styles.cards}>
             <div className={styles.card}>
               <img src="/brand/icon.png" alt="" />
-              <h1>Service</h1>
+              <h1>Security Systems</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate iusto nulla ea soluta neque temporibus necessitatibus.</p>
             </div>
             <div className={styles.card}>
               <img src="/brand/icon.png" alt="" />
-              <h1>Service</h1>
+              <h1>Central Station Monitoring</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate iusto nulla ea soluta neque temporibus necessitatibus.</p>
             </div>
             <div className={styles.card}>
               <img src="/brand/icon.png" alt="" />
-              <h1>Service</h1>
+              <h1>File Alarm Systems</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate iusto nulla ea soluta neque temporibus necessitatibus.</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Home: NextPage = () => {
             <div className={styles.card}>
               <img src="/assets/service.jpg" alt="" />
               <div className={styles.content}>
-                <h1>Service</h1>
+                <h1>Security For Home</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
                 <button className='button_pill'>Read More</button>
               </div>
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
             <div className={styles.card}>
               <img src="/assets/service.jpg" alt="" />
               <div className={styles.content}>
-                <h1>Service</h1>
+                <h1>Security For Home</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
                 <button className='button_pill'>Read More</button>
               </div>
@@ -126,10 +126,34 @@ const Home: NextPage = () => {
             <div className={styles.card}>
               <img src="/assets/service.jpg" alt="" />
               <div className={styles.content}>
-                <h1>Service</h1>
+                <h1>Security For Office</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
                 <button className='button_pill'>Read More</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.how_it_works}>
+        <div>
+          <h1>How It Works</h1>
+          <div className={styles.line}/>
+          <div className={styles.cards}>
+            <div className={styles.card}>
+              <div className={styles.number}>1</div>
+              <h1>Order Product</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.number}>2</div>
+              <h1>Installation</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.number}>3</div>
+              <h1>Enjoy Your Safety</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati cumque quia, in cupiditate.</p>
             </div>
           </div>
         </div>

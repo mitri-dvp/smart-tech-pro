@@ -10,6 +10,12 @@ export default function Footer() {
     <footer className={styles.container}>
       <div>
         <img src="/brand/logo.png" alt="" />
+        <div className={styles.socials}>
+
+        </div>
+        <div className={styles.copy}>
+          {new Date().getFullYear()} © Smart Tech Pro. All rights reserved.
+        </div>
       </div>
     </footer>
   )
