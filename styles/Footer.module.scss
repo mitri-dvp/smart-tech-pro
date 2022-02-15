@@ -4,7 +4,7 @@
   background-color: transparent;
   padding: 6rem $horizontal-padding;
   width: 100%;
-  background-color: lighten($blue, $amount: 35.5);
+  background-color: lighten($primary-color, $amount: 35.5);
 
   > div {
     max-width: $max-width;
@@ -20,7 +20,7 @@
 
     .copy {
       width: 75%;
-      border-top: 1px solid lighten($blue, $amount: 16);
+      border-top: 1px solid lighten($primary-color, $amount: 16);
       border-top: 1px solid #000;
       text-align: center;
       margin-top: 2rem;

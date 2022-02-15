@@ -11,34 +11,32 @@
   }
 
   .hero {
-    min-height: 100vh;
+    // min-height: 40rem;
+    min-height: 35rem;
     color: black;
     padding: $horizontal-padding;
     display: flex;
     align-items: center;
-    background-image: url('/assets/hero-2.jpg');
-    background-position: 0rem -8rem;
-    background-size: calc(100% + 45rem);
+    justify-content: center;
+    text-align: center;
+    background-image: url('/assets/hero-alt.jpg');
+    background-position: 25rem -12rem ;
+    // background-position: -10rem 1rem;
+    background-size: cover;
 
-    .content {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
+    h1 {
+      font-size: 5rem;
+    }
 
-      h1 {
-        font-size: 5rem;
-        line-height: 5rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-        line-height: 2.25rem;
-      }
-
-      .buttons {
-        display: flex;
-        gap: 2rem;
+    h2 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      
+      span {
+        color: $primary-color;
+        margin: 0 0.5rem;
       }
     }
   }
@@ -128,69 +126,6 @@
     }
   }
 
-  .services {
-    padding: $horizontal-padding;
-
-    h1 {
-      text-align: center;
-      font-size: 3.5rem;
-      position: relative;
-
-      &::after {
-        content: '';
-        display: block;
-        width: 8rem;
-        height: 0.2rem;
-        position: absolute;
-        bottom: -2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $primary-color;
-      }
-    }
-
-    .cards {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-
-      .card {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        height: 100%;
-        width: 100%;
-        background-color: white;
-        padding: 3rem 2rem;
-        border-radius: 1rem;
-
-        img {
-          display: block;
-          width: 3rem;
-          margin: auto;
-          margin-bottom: 1.5rem;
-        }
-
-        h1 {
-          font-size: 2rem;
-          margin-bottom: 3rem;
- 
-          &::after {
-            width: 5rem;
-            bottom: -1.5rem;
-          }
-        }
-
-        p {
-          color: #555;
-          font-family: PT sans;
-          text-align: center;
-          font-size: 1.2rem;
-          line-height: 2.25rem;
-        }
-      }
-    }
-  }
-
   .services_2 {
     padding: $horizontal-padding;
 
@@ -259,85 +194,6 @@
             font-size: 1.2rem;
             text-transform: none;
           }
-        }
-      }
-    }
-  }
-
-  .how_it_works {
-    padding: $horizontal-padding;
-
-    .line {
-      width: 60%;
-      margin: auto;
-      border-bottom: 3px dotted $primary-color;
-      transform: translateY(7.5rem);
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 3.5rem;
-      position: relative;
-
-      &::after {
-        content: '';
-        display: block;
-        width: 8rem;
-        height: 0.2rem;
-        position: absolute;
-        bottom: -2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $primary-color;
-      }
-    }
-
-    .cards {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-
-      .card {
-        height: 100%;
-        width: 100%;
-        border-radius: 1rem;
-        overflow: hidden;
-        
-        .number {
-          margin: auto;
-          font-size: 2rem;
-          color: $primary-color;
-          height: 5rem;
-          width: 5rem;
-          background-color: #fff;
-          font-weight: 600;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          margin-bottom: 2rem;
-          position: relative;
-          z-index: 1;
-        }
-        
-        h1 {
-          font-size: 2rem;
-          margin-bottom: 4rem;
-
-          &::after {
-            width: 5rem;
-            bottom: -2rem;
-          }
-        }
-
-        p {
-          color: #555;
-          text-align: center;
-          font-family: PT sans;
-          font-size: 1.2rem;
-          line-height: 2.25rem;
         }
       }
     }

@@ -27,24 +27,24 @@ a {
   font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen;
   font-weight: 600;
   color: white;
-  background-color: $blue;
+  background-color: $primary-color;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border: 1px solid transparent;
 
   &.inverted {
-    color: $blue;
+    color: $primary-color;
     background-color: white;
 
     &:hover {
       color: white;
-      background-color: $blue;
+      background-color: $primary-color;
     }
   }
 
   &:hover {
-    color: $blue;
+    color: $primary-color;
     background-color: white;
-    border-color: $blue;
+    border-color: $primary-color;
   }
 }

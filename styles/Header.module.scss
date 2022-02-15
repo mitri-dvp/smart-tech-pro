@@ -6,6 +6,7 @@
   padding: $horizontal-padding;
   position: absolute;
   width: 100%;
+  z-index: 10;
 
   .logo {
     margin-right: auto;
@@ -38,7 +39,8 @@
     font-weight: 600;
     position: relative;
 
-    &:hover {
+    &:hover,
+    &.active {
       &::after {
         content: '';
         display: block;
@@ -46,12 +48,16 @@
         height: 0.25rem;
         border-radius: 1rem;
         position: absolute;
-        background-color: $blue;
+        background-color: $primary-color;
         bottom: -0.5rem;
         left: 50%;
         transform: translateX(-50%);
         animation: link_grow 0.25s ease-in-out;
       }
+    }
+
+    &.active::after {
+      animation: none;
     }
   }
 }

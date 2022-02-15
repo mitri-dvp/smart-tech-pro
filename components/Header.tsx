@@ -5,21 +5,8 @@ import Link from 'next/link'
 import styles from '../styles/Header.module.scss'
 
 export default function Header() {
-  const router = useRouter()
-  const isHome = router.pathname === '/'
+  const { pathname } = useRouter()
   const [showMobileNav, setShowmobileNav] = useState(false)
-
-  if(!isHome) return (
-    <>
-      <header className={`${styles.header} ${styles.desktop}`}>
-        <nav>
-          <Link href="/">
-            <a></a>
-          </Link>
-        </nav>
-      </header>
-    </>
-  )
 
   return (
     <>
@@ -31,16 +18,16 @@ export default function Header() {
             </a>
           </Link>
           <Link href="/">
-            <a>home</a>
+            <a className={pathname === '/' ? styles.active : ''}>home</a>
           </Link>
           <Link href="/about">
-            <a>about</a>
+            <a className={pathname === '/about' ? styles.active : ''}>about</a>
           </Link>
           <Link href="/service">
-            <a>service</a>
+            <a className={pathname === '/service' ? styles.active : ''}>service</a>
           </Link>
           <Link href="/contact">
-            <a>contact</a>
+            <a className={pathname === '/contact' ? styles.active : ''}>contact</a>
           </Link>
         </nav>
       </header>
