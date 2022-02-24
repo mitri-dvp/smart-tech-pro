@@ -13,15 +13,13 @@
   .hero {
     // min-height: 40rem;
     min-height: 35rem;
-    color: black;
     padding: $horizontal-padding;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('/assets/hero-alt.jpg');
-    background-position: 25rem -12rem ;
-    // background-position: -10rem 1rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.5) 90%), url('/assets/006.png');
+    background-position: center;
     background-size: cover;
 
     h1 {
@@ -30,10 +28,10 @@
 
     h2 {
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.25rem;
       margin-top: 1rem;
-      
+
       span {
         color: $primary-color;
         margin: 0 0.5rem;

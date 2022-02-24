@@ -12,6 +12,8 @@ const Contact: NextPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
+    city: '',
     message: '',
   })
 
@@ -48,79 +50,36 @@ const Contact: NextPage = () => {
               </p>
               <div className={styles.contact_details}>
                 <div className={styles.icon}>
-                  <Phone/>
+                  <Phone />
                 </div>
                 <p>
-                  +01 (000) 234 765 <br />
-                  +01 (000) 234 765
+                  (305) 440-6772
                 </p>
                 <div className={styles.icon}>
-                  <Envelope/>
+                  <Envelope />
                 </div>
                 <p>
-                  contactus@gmail.com <br />
-                  anothermailus@gmail.com
+                  <a href="mailto:jalizo@smarttechpro.net">jalizo@smarttechpro.net</a>
                 </p>
                 <div className={styles.icon}>
-                  <Location/>
+                  <Location />
                 </div>
                 <p>
-                  3010 Lauler Lee <br />
-                  Blaine, MN 55414, USA
+                  1695 NW 110th Ave Ste 213 <br />
+                  Miami, FL 33172, USA
                 </p>
               </div>
             </div>
             <div className={styles.image}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.91597873747!2d-74.12010676022567!3d40.69740302639834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1644899247741!5m2!1ses-419!2sco"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.4355922519408!2d-80.37547734894368!3d25.78919978354391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bec9acbd8cf1%3A0xf5f001969fac263e!2s1695%20NW%20110th%20Ave%2C%20Doral%2C%20FL%2033172%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1644958318714!5m2!1ses-419!2sco"
                 width="100%"
                 height="100%"
                 allowFullScreen
-                style={{border: 0}}
+                style={{ border: 0 }}
                 loading="lazy"></iframe>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className={styles.form}>
-        <div>
-          <h1>Our Services</h1>
-          <form onSubmit={handleSubmit}>
-            <label>
-              <span>Name</span>
-              <input
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                type="text"
-                required
-              />
-            </label>
-            <label>
-              <span>Email</span>
-              <input
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                type="email"
-                required
-              />
-            </label>
-            <label style={{gridColumn: "span 2"}}>
-              <span>Message</span>
-              <textarea
-                value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
-                cols={30}
-                rows={10}
-                required
-              ></textarea>
-            </label>
-            <button
-              className='button_pill'
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </section>
 

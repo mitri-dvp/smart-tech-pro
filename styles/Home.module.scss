@@ -12,23 +12,22 @@
 
   .hero {
     min-height: 100vh;
-    color: black;
     padding: $horizontal-padding;
     display: flex;
     align-items: center;
-    background-image: url('/assets/hero-2.jpg');
-    background-position: 0rem -8rem;
-    background-size: calc(100% + 45rem);
+    background: linear-gradient(rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.0)), url('/assets/004.jpg');
+    background-position: center;
+    background-size: cover;
 
     .content {
-      width: 60%;
+      width: 40%;
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 2rem;
 
       h1 {
-        font-size: 5rem;
-        line-height: 5rem;
+        font-size: 4rem;
+        line-height: 4rem;
       }
 
       p {
@@ -49,16 +48,12 @@
     align-items: center;
     padding: $horizontal-padding;
 
-    &.mirror {
-      .content {
-        order: 1;
-      }
-    }
-
     .card {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       background: white;
-      min-height: 700px;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
       border-radius: 1rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -126,6 +121,18 @@
         }
       }
     }
+    &.mirror {
+      .content {
+        order: 1;
+      }
+      .image {
+        overflow: hidden;
+        img {
+          height: 100%;
+          transform: translateX(-20rem);
+        }
+      }
+    }
   }
 
   .services {
@@ -151,32 +158,41 @@
 
     .cards {
       margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
       .card {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         height: 100%;
         width: 100%;
         background-color: white;
-        padding: 3rem 2rem;
+        padding: 2rem 2rem;
         border-radius: 1rem;
+        flex-grow: 1;
+        width: 100%;
+        max-width: 430px;
+        min-height: 450px;
 
+        .image_container {
+          height: 14rem;
+          border-radius: 1rem;
+          background-size: cover;
+          background-position: center;
+        }
         img {
-          display: block;
-          width: 3rem;
-          margin: auto;
-          margin-bottom: 1.5rem;
+          visibility: hidden;
+          width: 0;
         }
 
         h1 {
           font-size: 2rem;
-          margin-bottom: 3rem;
+          margin-top: 2rem;
  
           &::after {
             width: 5rem;
-            bottom: -1.5rem;
+            top: -1.5rem;
           }
         }
 
@@ -198,6 +214,7 @@
       text-align: center;
       font-size: 3.5rem;
       position: relative;
+      margin-bottom: 5rem;
 
       &::after {
         content: '';
@@ -212,53 +229,71 @@
       }
     }
 
-    .cards {
-      margin-top: 5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
+    .card {
+      margin-bottom: 2rem;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      
+      .image_container {
+        height: 16rem;
+        background-size: cover;
+        background-position: center;
+      }
+      img {
+        width: 0;
+        visibility: hidden;
+      }
+      
+      .content {
+        padding: 2rem;
+        padding-top: 0;
 
-      .card {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        height: 100%;
-        width: 100%;
-        background-color: white;
-        border-radius: 1rem;
-        overflow: hidden;
-        
-        img {
-          width: 100%;
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 3rem;
+          text-align: left;
+
+          &::after {
+            width: 5rem;
+            bottom: -1.5rem;
+            left: 0;
+            transform: translateX(0);
+          }
         }
-        
-        .content {
-          padding: 3rem 3.5rem;
 
-          h1 {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            text-align: left;
-  
-            &::after {
-              width: 5rem;
-              bottom: -1.5rem;
-              left: 0;
-              transform: translateX(0);
-            }
-          }
+        p {
+          color: #555;
+          font-family: PT sans;
+          font-size: 1.2rem;
+          line-height: 2.25rem;
+        }
 
-          p {
-            color: #555;
-            font-family: PT sans;
-            font-size: 1.2rem;
-            line-height: 2.25rem;
-          }
+        button {
+          margin-top: 1.5rem;
+          padding: 0.5rem 1.5rem;
+          font-size: 1.2rem;
+          text-transform: none;
+        }
+      }
+    }
 
-          button {
-            margin-top: 1.5rem;
-            padding: 0.5rem 1.5rem;
-            font-size: 1.2rem;
-            text-transform: none;
-          }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      button {
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        svg {
+          height: 3rem;
+          width: 3rem;
+          fill: $primary-color;
         }
       }
     }
