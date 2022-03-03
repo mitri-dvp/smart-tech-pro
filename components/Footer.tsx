@@ -9,9 +9,25 @@ export default function Footer() {
   return (
     <footer className={styles.container}>
       <div>
-        <img src="/brand/logo.png" alt="" />
         <div className={styles.info}>
+          <div>
+            <img src="/brand/logo.png" alt="" />
+
+
+          </div>
+
+          <div className={styles.socials}>
+            <h3>Follow</h3>
+            <a href="#">
+              <Instagram /> <span>Instagram</span>
+            </a>
+            <a href="#">
+              <Facebook /> <span>Facebook</span>
+            </a>
+          </div>
+
           <div className={styles.contact}>
+            <h3>Contact</h3>
             <div className={styles.address}>
               1695 NW 110th Ave Ste 213
               Miami, FL 33172, USA
@@ -22,14 +38,6 @@ export default function Footer() {
             <div>
               <a href="mailto:jalizo@smarttechpro.net">jalizo@smarttechpro.net</a>
             </div>
-          </div>
-          <div className={styles.socials}>
-            <a href="#">
-              <Instagram />
-            </a>
-            <a href="#">
-              <Facebook />
-            </a>
           </div>
         </div>
         <div className={styles.copy}>
