@@ -7,23 +7,24 @@
     max-width: $max-width;
     width: 100%;
     margin: auto;
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   .hero {
-    min-height: 100vh;
     padding: $horizontal-padding;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.0)), url('/assets/004.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.65) 70%, rgba(255, 255, 255, 0.25)), url('/assets/004.jpg');
     background-position: center;
     background-size: cover;
 
     .content {
-      width: 40%;
+      width: 100%;
+      max-width: 600px;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 3rem;
 
       h1 {
         font-size: 4rem;
@@ -43,15 +44,16 @@
   }
 
   .large_card {
+    padding: $horizontal-padding;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $horizontal-padding;
 
     .card {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       background: white;
       width: 100%;
+      max-height: 600px;
       max-width: 1200px;
       margin: auto;
       border-radius: 1rem;
@@ -60,16 +62,16 @@
       overflow: hidden;
 
       .content {
-        padding: 4rem;
+        padding: 4rem 3.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 4rem;
-        height: 100%;
+        max-height: inherit;
 
         h1 {
-          font-size: 3.5rem;
+          font-size: 3rem;
           position: relative;
+          margin-bottom: 3.5rem;
 
           &::after {
             content: '';
@@ -77,7 +79,7 @@
             width: 8rem;
             height: 0.2rem;
             position: absolute;
-            bottom: -2rem;
+            bottom: -1.5rem;
             background-color: $primary-color;
           }
         }
@@ -109,15 +111,37 @@
               fill: $primary-color;
               height: 1.5rem;
               width: 1.5rem;
+              flex-shrink: 0;
             }
           }
         }
       }
+
       .image {
         overflow: hidden;
         img {
           height: 100%;
           transform: translateX(-20rem);
+        }
+      }
+
+      .contact_details {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        gap: 0.5rem;
+        
+        svg {
+          margin-top: 0.5rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          fill: #555;
+        }
+        a {
+          color: $primary-color;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -140,7 +164,7 @@
 
     h1 {
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 3rem;
       position: relative;
 
       &::after {
@@ -157,23 +181,27 @@
     }
 
     .cards {
-      margin-top: 5rem;
       gap: 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
+      margin: auto;
+      margin-top: 5rem;
+      
       .card {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        height: 100%;
-        width: 100%;
         background-color: white;
-        padding: 2rem 2rem;
+        padding: 2rem;
         border-radius: 1rem;
         flex-grow: 1;
-        width: 100%;
-        max-width: 430px;
-        min-height: 450px;
+        height: auto;
+        max-width: calc(800px / 3);
+        min-height: calc(400px / 3);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         .image_container {
           height: 14rem;
@@ -181,13 +209,17 @@
           background-size: cover;
           background-position: center;
         }
-        img {
-          visibility: hidden;
-          width: 0;
+        
+        svg {
+          fill: $primary-color;
+          height: 3rem;
+          width: 3rem;
+          margin: 0 auto;
+          margin-bottom: 2rem;
         }
 
         h1 {
-          font-size: 2rem;
+          font-size: 1.5rem;
           margin-top: 2rem;
  
           &::after {
@@ -207,12 +239,14 @@
     }
   }
 
-  .services_2 {
+  .services_slider {
     padding: $horizontal-padding;
+    max-width: $max-width;
+    margin: auto;
 
     h1 {
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 3rem;
       position: relative;
       margin-bottom: 5rem;
 
@@ -239,7 +273,7 @@
       overflow: hidden;
       
       .image_container {
-        height: 16rem;
+        height: 400px;
         background-size: cover;
         background-position: center;
       }
@@ -249,8 +283,9 @@
       }
       
       .content {
-        padding: 2rem;
+        padding: 4rem 3.5rem;
         padding-top: 0;
+        
 
         h1 {
           font-size: 2rem;
@@ -311,7 +346,7 @@
 
     h1 {
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 3rem;
       position: relative;
 
       &::after {
@@ -375,6 +410,121 @@
           line-height: 2.25rem;
         }
       }
+    }
+  }
+}
+
+
+@media(max-width: 992px) {
+  .container {
+    .large_card {
+        .card {
+        max-height: none;
+        grid-template-columns: 1fr;
+
+        .content {
+          order: 1;
+        }
+        .image {
+          max-height: 400px;
+          overflow: hidden;
+          img {
+            transform: translateX(0);
+            height: unset;
+            width: 100%;
+          }
+          iframe {
+            height: 400px;
+          }
+        }
+      }
+    }
+
+    .how_it_works {
+  
+      .line {
+        display: none;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: auto;
+        margin-top: 5rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    .services {
+      .cards {
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .container {
+
+    .hero {
+      padding: $mobile-horizontal-padding;
+      .content {
+        gap: 1.5rem;
+        text-align: center;
+        h1 {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+        button {
+          margin: auto;
+        }
+      }
+    }
+
+    .large_card {
+      padding: $mobile-horizontal-padding;
+      .card {
+        .content {
+          padding: 2rem;
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.75rem;
+          }
+          ul li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .services {
+      padding: $mobile-horizontal-padding;
+    }
+    .services_slider {
+      padding: $mobile-horizontal-padding;
+      .card {
+        .image_container {
+          height: 200px;
+        }
+        .content {
+          padding: 2rem;
+          padding-top: 0;
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.75rem;
+          }
+        }
+      }
+    }
+    .how_it_works {
+      padding: $mobile-horizontal-padding;
     }
   }
 }

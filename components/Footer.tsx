@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from '../styles/Footer.module.scss'
-import { Facebook, Instagram } from './svgs/Socials'
+import { Facebook, Instagram, LinkedIn } from './svgs/Socials'
 
 export default function Footer() {
   const { pathname } = useRouter()
@@ -9,20 +9,37 @@ export default function Footer() {
   return (
     <footer className={styles.container}>
       <div>
+        <div className={styles.mobile_logo}>
+          <img src="/brand/logo.png" alt="" />
+        </div>
+
         <div className={styles.info}>
-          <div>
+          <div className={styles.logo}>
             <img src="/brand/logo.png" alt="" />
-
-
           </div>
 
           <div className={styles.socials}>
             <h3>Follow</h3>
-            <a href="#">
+            <a
+              href="https://www.facebook.com/Smart-Tech-Pro-LLC-111976191421624/?ref=pages_you_manage"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Facebook /> <span>Facebook</span>
+            </a>
+            <a
+              href="https://www.instagram.com/smarttechpro22/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Instagram /> <span>Instagram</span>
             </a>
-            <a href="#">
-              <Facebook /> <span>Facebook</span>
+            <a
+              href="#"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <LinkedIn /> <span>LinkedIn</span>
             </a>
           </div>
 
@@ -33,10 +50,24 @@ export default function Footer() {
               Miami, FL 33172, USA
             </div>
             <div>
-              (305) 440-6772
+              <a
+                href="tel:17862387080"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                +1 786 238-7080
+              </a>
+              <br />
+              <a
+                href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                +1 786 670-0578
+              </a>
             </div>
             <div>
-              <a href="mailto:jalizo@smarttechpro.net">jalizo@smarttechpro.net</a>
+              <a href="mailto:info@smarttechpro.net">info@smarttechpro.net</a>
             </div>
           </div>
         </div>
@@ -46,17 +77,17 @@ export default function Footer() {
           </div>
 
           <nav>
-            <Link href="/">
-              <a className={pathname === '/' ? styles.active : ''}>home</a>
+            <Link href="#">
+              <a>home</a>
             </Link>
-            <Link href="/about">
-              <a className={pathname === '/about' ? styles.active : ''}>about</a>
+            <Link href="#about">
+              <a>about</a>
             </Link>
-            <Link href="/service">
-              <a className={pathname === '/service' ? styles.active : ''}>service</a>
+            <Link href="#services">
+              <a>services</a>
             </Link>
-            <Link href="/contact">
-              <a className={pathname === '/contact' ? styles.active : ''}>contact</a>
+            <Link href="#contact">
+              <a>contact</a>
             </Link>
           </nav>
         </div>

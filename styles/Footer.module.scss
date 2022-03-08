@@ -2,9 +2,14 @@
 
 .container {
   background-color: transparent;
-  padding: 6rem $horizontal-padding;
+  margin-top: 4rem;
+  padding: 6rem;
   width: 100%;
   background-color: lighten($primary-color, $amount: 35.5);
+
+  .mobile_logo {
+    display: none;
+  }
 
   > div {
     max-width: $max-width;
@@ -109,4 +114,46 @@
 @keyframes link_grow {
   from { width: 0rem; }
   to { width: 2rem; }
+}
+
+@media(max-width: 768px) {
+  .container {
+    .mobile_logo {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .info {
+      grid-template-columns: 50% 50%;
+      gap: 1rem;
+      max-width: 350px;
+
+      .socials {
+        margin: 0;
+      }
+    }
+
+    .copy {
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .container {
+    padding: 1.5rem;
+    .info {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

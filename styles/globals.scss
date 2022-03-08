@@ -5,6 +5,8 @@ body {
   color: #111;
   font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 a {
