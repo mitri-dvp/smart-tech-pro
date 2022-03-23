@@ -55,3 +55,12 @@ a {
 .swiper-button-disabled {
   opacity: 0.5;
 }
+
+.logos-slider .swiper-wrapper {
+  align-items: center;
+}
+.logos-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
