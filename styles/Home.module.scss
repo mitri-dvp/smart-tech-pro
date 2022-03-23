@@ -12,10 +12,12 @@
 
   .hero {
     padding: $horizontal-padding;
+    padding-top: 8rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.65) 70%, rgba(255, 255, 255, 0.25)), url('/assets/004.jpg');
+    background: url('/assets/004.jpg');
+    color: #fff;
     background-position: center;
     background-size: cover;
 
@@ -53,12 +55,12 @@
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       background: white;
       width: 100%;
-      max-height: 600px;
+      height: 600px;
       max-width: 1200px;
       margin: auto;
       border-radius: 1rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
       overflow: hidden;
 
       .content {
@@ -117,11 +119,15 @@
         }
       }
 
-      .image {
-        overflow: hidden;
-        img {
+      .image_container {
+        .image_slider {
           height: 100%;
-          transform: translateX(-20rem);
+          width: 100%;
+        }
+        .image {
+          height: 100%;
+          background-position: center;
+          background-size: cover;
         }
       }
 
@@ -215,7 +221,7 @@
           height: 3rem;
           width: 3rem;
           margin: 0 auto;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
         }
 
         h1 {
@@ -243,6 +249,7 @@
     padding: $horizontal-padding;
     max-width: $max-width;
     margin: auto;
+    position: relative;
 
     h1 {
       text-align: center;
@@ -264,7 +271,6 @@
     }
 
     .card {
-      margin-bottom: 2rem;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       height: 100%;
       width: 100%;
@@ -273,65 +279,91 @@
       overflow: hidden;
       
       .image_container {
-        height: 400px;
+        height: 650px;
         background-size: cover;
         background-position: center;
+        display: flex;
+
+        .content {
+          padding: 2rem;
+          padding-top: 5rem;
+          padding-bottom: 3rem;
+          background: linear-gradient(rgb(0, 0, 0, 0%),rgb(0, 0, 0, 100%));
+          color: #fff;
+          margin-top: auto;
+          width: 100%;
+  
+          h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: left;
+  
+            &::after {
+              display: none;
+            }
+          }
+  
+          p {
+            color: #fff;
+            font-family: PT sans;
+            font-size: 1.2rem;
+            line-height: 2.25rem;
+          }
+  
+          button {
+            margin-top: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            font-size: 1.2rem;
+            text-transform: none;
+          }
+        }
       }
+
       img {
         width: 0;
         visibility: hidden;
       }
-      
-      .content {
-        padding: 4rem 3.5rem;
-        padding-top: 0;
-        
-
-        h1 {
-          font-size: 2rem;
-          margin-bottom: 3rem;
-          text-align: left;
-
-          &::after {
-            width: 5rem;
-            bottom: -1.5rem;
-            left: 0;
-            transform: translateX(0);
-          }
-        }
-
-        p {
-          color: #555;
-          font-family: PT sans;
-          font-size: 1.2rem;
-          line-height: 2.25rem;
-        }
-
-        button {
-          margin-top: 1.5rem;
-          padding: 0.5rem 1.5rem;
-          font-size: 1.2rem;
-          text-transform: none;
-        }
-      }
     }
 
-    .buttons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1rem;
+    .button_prev,
+    .button_next {
       button {
         border: 0;
         background-color: transparent;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+      
         svg {
-          height: 3rem;
-          width: 3rem;
-          fill: $primary-color;
+          height: 2rem;
+          width: 2rem;
+          fill: #fff;
         }
       }
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
     }
+
+    .button_prev {
+      left: 1rem;
+    }
+    .button_next {
+      right: 1rem;
+    }
+
+    .bullet {
+      height: 0.25rem;
+      width: 2rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      display: inline-block;
+      margin: 0.5rem;
+      cursor: pointer;
+      &.active {
+        background-color: #fff;
+      }
+    }
+
   }
 
   .how_it_works {
@@ -412,6 +444,37 @@
       }
     }
   }
+
+  .brands {
+    padding: $horizontal-padding;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 8rem;
+        height: 0.2rem;
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+      }
+    }
+
+    .logos {
+      margin-top: 7rem;
+        .logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+  }
 }
 
 
@@ -419,20 +482,14 @@
   .container {
     .large_card {
         .card {
-        max-height: none;
-        grid-template-columns: 1fr;
+        height: auto;
+        grid-template-columns: 100%;
 
         .content {
           order: 1;
         }
-        .image {
-          max-height: 400px;
-          overflow: hidden;
-          img {
-            transform: translateX(0);
-            height: unset;
-            width: 100%;
-          }
+        .image_container {
+          height: 400px;
           iframe {
             height: 400px;
           }
@@ -508,19 +565,25 @@
       padding: $mobile-horizontal-padding;
       .card {
         .image_container {
-          height: 200px;
-        }
-        .content {
-          padding: 2rem;
-          padding-top: 0;
-          h1 {
-            font-size: 2rem;
+          height: 400px;
+          .content {
+            padding: 2rem;
+            padding-top: 0;
+            h1 {
+              font-size: 1.25rem;
+              margin-bottom: 0.5rem;
+            }
+            p {
+              font-size: 0.9rem;
+              line-height: 1rem;
+            }
+            button {display: none;}
           }
-          p {
-            font-size: 1rem;
-            line-height: 1.75rem;
-          }
         }
+      }
+      .button_prev,
+      .button_next {
+        display: none;
       }
     }
     .how_it_works {
