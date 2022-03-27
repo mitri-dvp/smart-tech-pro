@@ -46,9 +46,20 @@ const Home: NextPage = () => {
               button! Request you free quote now!
             </p>
             <div className={styles.buttons}>
-              <button className='button_pill'>
-                contact us
-              </button>
+              <a
+                href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information on how to be in control of my home and my business."
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Whatsapp />
+              </a>
+              <a
+                href="mailto:info@smarttechpro.net?body=Hello! I want more information on how to be in control of my home and my business."
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Envelope />
+              </a>
             </div>
           </div>
         </div>
@@ -209,14 +220,14 @@ const Home: NextPage = () => {
                     </div>
                     <div className={styles.right}>
                       <a
-                        href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                        href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information about structured cable service and networks."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <Whatsapp />
                       </a>
                       <a
-                        href="mailto:info@smarttechpro.net"
+                        href="mailto:info@smarttechpro.net?body=Hello! I want more information about structured cable service and networks."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -243,14 +254,14 @@ const Home: NextPage = () => {
 
                     <div className={styles.right}>
                       <a
-                        href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                        href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information about the security cameras service and CCTV system."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <Whatsapp />
                       </a>
                       <a
-                        href="mailto:info@smarttechpro.net"
+                        href="mailto:info@smarttechpro.net?body=Hello! I want more information about the security cameras service and CCTV system."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -282,14 +293,14 @@ const Home: NextPage = () => {
 
                     <div className={styles.right}>
                       <a
-                        href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                        href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information about the Access Control System service."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <Whatsapp />
                       </a>
                       <a
-                        href="mailto:info@smarttechpro.net"
+                        href="mailto:info@smarttechpro.net?body=Hello! I want more information about the Access Control System service."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -321,14 +332,14 @@ const Home: NextPage = () => {
 
                     <div className={styles.right}>
                       <a
-                        href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                        href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information about the Audio and Video for interiors and exteriors."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <Whatsapp />
                       </a>
                       <a
-                        href="mailto:info@smarttechpro.net"
+                        href="mailto:info@smarttechpro.net?body=Hello! I want more information about the Audio and Video for interiors and exteriors."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -343,7 +354,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/smart-home/007.jpg)" }}
+                  style={{ backgroundImage: "url(/assets/products/smart-home/006.png)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>
@@ -355,14 +366,14 @@ const Home: NextPage = () => {
 
                     <div className={styles.right}>
                       <a
-                        href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                        href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want more information about their services for smart homes."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
                         <Whatsapp />
                       </a>
                       <a
-                        href="mailto:info@smarttechpro.net"
+                        href="mailto:info@smarttechpro.net?body=Hello! I want more information about the Audio and Video for interiors and exteriors."
                         target="_blank"
                         rel="noreferrer noopener"
                       >
@@ -501,7 +512,7 @@ const Home: NextPage = () => {
                 </div>
                 <p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=17866700578&text=123"
+                    href="https://api.whatsapp.com/send?phone=17866700578&text=Hello! I want to have more information about your services."
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -513,7 +524,7 @@ const Home: NextPage = () => {
                   <Envelope />
                 </div>
                 <p>
-                  <a href="mailto:info@smarttechpro.net">info@smarttechpro.net</a>
+                  <a href="mailto:info@smarttechpro.net?body=Hello! I want to have more information about your services.">info@smarttechpro.net</a>
                 </p>
               </div>
             </div>
