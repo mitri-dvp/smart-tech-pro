@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "smart-tech-pro-website",
   "private": true,
   "scripts": {
     "dev": "next dev",

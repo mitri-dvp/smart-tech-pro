@@ -23,6 +23,7 @@ import { Whatsapp } from '@components/svgs/Socials'
 const Home: NextPage = () => {
   const slidePrev = useRef() as React.MutableRefObject<HTMLButtonElement>
   const slideNext = useRef() as React.MutableRefObject<HTMLButtonElement>
+
   return (
     <div className={styles.container}>
       <Seo
@@ -89,10 +90,10 @@ const Home: NextPage = () => {
               >
                 {
                   [
-                    "url(/assets/products/CCTV/003-1.jpg)",
-                    "url(/assets/products/access-control/personal/001.jpg)",
-                    "url(/assets/products/audio-video/audio/001.jpg)",
-                    "url(/assets/products/audio-video/003.jpg)",
+                    "url(/assets/products/CCTV/002.webp)",
+                    "url(/assets/products/access-control/personal/001.webp)",
+                    "url(/assets/products/audio-video/audio/001.webp)",
+                    "url(/assets/products/audio-video/001.webp)",
                     "url(/assets/products/structured-cabling/002.webp)"
                   ].map((url, i) => (<SwiperSlide key={url}>
                     <div
@@ -158,11 +159,11 @@ const Home: NextPage = () => {
                 className={styles.image_slider}
               >
                 {[
-                  "url(/assets/products/CCTV/004-1.png)",
-                  "url(/assets/products/access-control/personal/007.jpg)",
-                  "url(/assets/products/audio-video/audio/006.jpg)",
-                  "url(/assets/products/smart-home/006.jpg)",
-                  "url(/assets/products/structured-cabling/003.jpg)"
+                  "url(/assets/products/CCTV/003.webp)",
+                  "url(/assets/products/access-control/personal/003.webp)",
+                  "url(/assets/products/audio-video/audio/003.webp)",
+                  "url(/assets/products/smart-home/001.webp)",
+                  "url(/assets/products/structured-cabling/003.webp)"
                 ].map((url, i) => (<SwiperSlide key={url}>
                   <div
                     className={styles.image}
@@ -209,7 +210,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/structured-cabling/001.jpg)" }}
+                  style={{ backgroundImage: "url(/assets/products/structured-cabling/001.webp)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>
@@ -242,7 +243,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/CCTV/002.jpg)" }}
+                  style={{ backgroundImage: "url(/assets/products/CCTV/001.webp)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>
@@ -276,7 +277,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/access-control/personal/003.jpg)" }}
+                  style={{ backgroundImage: "url(/assets/products/access-control/personal/002.webp)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>
@@ -315,7 +316,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/audio-video/audio/002.jpeg)" }}
+                  style={{ backgroundImage: "url(/assets/products/audio-video/audio/002.webp)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>
@@ -354,7 +355,7 @@ const Home: NextPage = () => {
               <div className={styles.card}>
                 <div
                   className={styles.image_container}
-                  style={{ backgroundImage: "url(/assets/products/smart-home/006.png)" }}
+                  style={{ backgroundImage: "url(/assets/products/smart-home/001.webp)" }}
                 >
                   <div className={styles.content}>
                     <div className={styles.left}>

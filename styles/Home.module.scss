@@ -3,7 +3,7 @@
 .container {
   background-color: lighten($primary-color, $amount: 37.5);
 
-  section > div {
+  section>div {
     max-width: $max-width;
     width: 100%;
     margin: auto;
@@ -16,7 +16,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url('/assets/004.jpg');
+    background: url('/assets/hero.webp');
     color: #fff;
     background-position: center;
     background-size: cover;
@@ -52,6 +52,7 @@
           padding: 0.75rem;
           border-radius: 50rem;
         }
+
         svg {
           height: 100%;
           width: 100%;
@@ -112,11 +113,13 @@
           width: max-content;
         }
 
-        ul, ol {
+        ul,
+        ol {
           list-style: none;
           display: flex;
           flex-direction: column;
           gap: 1rem;
+
           li {
             display: flex;
             align-items: center;
@@ -139,6 +142,7 @@
           height: 100%;
           width: 100%;
         }
+
         .image {
           height: 100%;
           background-position: center;
@@ -151,27 +155,32 @@
         display: grid;
         grid-template-columns: 2.5rem 1fr;
         gap: 0.5rem;
-        
+
         svg {
           margin-top: 0.5rem;
           width: 1.25rem;
           height: 1.25rem;
           fill: #555;
         }
+
         a {
           color: $primary-color;
+
           &:hover {
             text-decoration: underline;
           }
         }
       }
     }
+
     &.mirror {
       .content {
         order: 1;
       }
+
       .image {
         overflow: hidden;
+
         img {
           height: 100%;
           transform: translateX(-20rem);
@@ -208,7 +217,7 @@
       justify-content: center;
       margin: auto;
       margin-top: 5rem;
-      
+
       .card {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         background-color: white;
@@ -230,7 +239,7 @@
           background-size: cover;
           background-position: center;
         }
-        
+
         svg {
           fill: $primary-color;
           height: 3rem;
@@ -242,7 +251,7 @@
         h1 {
           font-size: 1.5rem;
           margin-top: 2rem;
- 
+
           &::after {
             width: 5rem;
             top: -1.5rem;
@@ -292,7 +301,7 @@
       background-color: white;
       border-radius: 1rem;
       overflow: hidden;
-      
+
       .image_container {
         height: 650px;
         background-size: cover;
@@ -303,7 +312,7 @@
           padding: 2rem;
           padding-top: 5rem;
           padding-bottom: 3rem;
-          background: linear-gradient(rgb(0, 0, 0, 0%),rgb(0, 0, 0, 100%));
+          background: linear-gradient(rgb(0, 0, 0, 0%), rgb(0, 0, 0, 100%));
           color: #fff;
           margin-top: auto;
           width: 100%;
@@ -314,6 +323,7 @@
             display: flex;
             gap: 2rem;
             margin-top: auto;
+
             a {
               background-color: $primary-color;
               display: flex;
@@ -324,29 +334,30 @@
               padding: 0.75rem;
               border-radius: 50rem;
             }
+
             svg {
               height: 100%;
               width: 100%;
             }
           }
-  
+
           h1 {
             font-size: 2rem;
             margin-bottom: 1rem;
             text-align: left;
-  
+
             &::after {
               display: none;
             }
           }
-  
+
           p {
             color: #fff;
             font-family: PT sans;
             font-size: 1.2rem;
             line-height: 2.25rem;
           }
-  
+
           button {
             margin-top: 1.5rem;
             padding: 0.5rem 1.5rem;
@@ -369,13 +380,14 @@
         background-color: transparent;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
-      
+
         svg {
           height: 2rem;
           width: 2rem;
           fill: #fff;
         }
       }
+
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -385,6 +397,7 @@
     .button_prev {
       left: 1rem;
     }
+
     .button_next {
       right: 1rem;
     }
@@ -396,6 +409,7 @@
       display: inline-block;
       margin: 0.5rem;
       cursor: pointer;
+
       &.active {
         background-color: #fff;
       }
@@ -442,7 +456,7 @@
         width: 100%;
         border-radius: 1rem;
         overflow: hidden;
-        
+
         .number {
           margin: auto;
           font-size: 2rem;
@@ -460,7 +474,7 @@
           position: relative;
           z-index: 1;
         }
-        
+
         h1 {
           font-size: 2rem;
           margin-bottom: 4rem;
@@ -505,13 +519,14 @@
 
     .logos {
       margin-top: 7rem;
-        .logo {
-          width: 10rem;
-          height: 5rem;
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
+
+      .logo {
+        width: 10rem;
+        height: 5rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
@@ -520,15 +535,17 @@
 @media(max-width: 992px) {
   .container {
     .large_card {
-        .card {
+      .card {
         height: auto;
         grid-template-columns: 100%;
 
         .content {
           order: 1;
         }
+
         .image_container {
           height: 400px;
+
           iframe {
             height: 400px;
           }
@@ -537,10 +554,11 @@
     }
 
     .how_it_works {
-  
+
       .line {
         display: none;
       }
+
       .cards {
         grid-template-columns: 1fr;
         max-width: 350px;
@@ -566,15 +584,19 @@
     .brands {
       padding: $mobile-horizontal-padding;
     }
+
     .hero {
       padding: $mobile-horizontal-padding;
+
       .content {
         gap: 1.5rem;
         text-align: center;
+
         h1 {
           font-size: 3rem;
           line-height: 3rem;
         }
+
         button {
           margin: auto;
         }
@@ -583,16 +605,20 @@
 
     .large_card {
       padding: $mobile-horizontal-padding;
+
       .card {
         .content {
           padding: 2rem;
+
           h1 {
             font-size: 2rem;
           }
+
           p {
             font-size: 1rem;
             line-height: 1.75rem;
           }
+
           ul li {
             font-size: 1rem;
           }
@@ -606,51 +632,61 @@
 
     .services_slider {
       padding: $mobile-horizontal-padding;
+
       .card {
         .image_container {
           height: 400px;
+
           .content {
             padding: 2.5rem 1rem;
             padding-top: 0;
+
             h1 {
               font-size: 1.25rem;
               margin-bottom: 0.5rem;
             }
+
             p {
               display: none;
             }
-            
-          .right {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-left: auto;
-            margin-top: auto;
-            gap: 0.5rem;
 
-            a {
-              background-color: $primary-color;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 2rem;
-              height: 2rem;
-              padding: 0.5rem;
-              border-radius: 50rem;
+            .right {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              margin-left: auto;
+              margin-top: auto;
+              gap: 0.5rem;
+
+              a {
+                background-color: $primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                padding: 0.5rem;
+                border-radius: 50rem;
+              }
+
+              svg {
+                height: 100%;
+                width: 100%;
+              }
             }
-            svg {
-              height: 100%;
-              width: 100%;
+
+            button {
+              display: none;
             }
-          }
-            button {display: none;}
           }
         }
       }
+
       .button_prev,
       .button_next {
         display: none;
       }
     }
+
     .how_it_works {
       padding: $mobile-horizontal-padding;
     }
